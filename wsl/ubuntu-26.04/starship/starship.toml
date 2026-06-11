@@ -1,0 +1,61 @@
+format = """
+[\ue0b6](fg:#ebdbb2)\
+$os\
+[\ue0b0](fg:#ebdbb2 bg:#fe8019)\
+$directory\
+[\ue0b0](fg:#fe8019 bg:#fabd2f)\
+$git_branch\
+$git_status\
+[\ue0b0](fg:#fabd2f bg:#8ec07c)\
+$nodejs\
+$python\
+[\ue0b0](fg:#8ec07c bg:#458588)\
+[\ue0b0](fg:#458588)\
+$line_break\
+$character"""
+
+add_newline = true
+right_format = ""
+
+[os]
+disabled = false
+style = "bg:#ebdbb2 fg:#282828"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Windows = "\ue70f"
+Ubuntu = "\uf31b"
+Arch = "\uf303"
+
+[directory]
+style = "bg:#fe8019 fg:#282828"
+format = "[ $path ]($style)"
+truncation_length = 3
+fish_style_pwd_dir_length = 1
+home_symbol = "~"
+
+[git_branch]
+symbol = "\uf418"
+style = "bg:#fabd2f fg:#282828"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#fabd2f fg:#282828"
+format = "[[($all_status$ahead_behind)]($style)]($style)"
+
+[nodejs]
+symbol = "\ue718"
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[python]
+symbol = "\ue73c"
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[character]
+success_symbol = "[\u00BB](bold fg:#fabd2f)"
+error_symbol = "[\u00BB](bold fg:#fb4934)"
+
+[line_break]
+disabled = false

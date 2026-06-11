@@ -1,0 +1,109 @@
+format = """
+[](fg:#ebdbb2)\
+$os\
+[](fg:#ebdbb2 bg:#fe8019)\
+$directory\
+[](fg:#fe8019 bg:#fabd2f)\
+$git_branch\
+$git_status\
+[](fg:#fabd2f bg:#8ec07c)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:#8ec07c bg:#458588)\
+$docker_context\
+[](fg:#458588)\
+$line_break\
+$character"""
+
+add_newline = true
+right_format = ""
+
+[os]
+disabled = false
+style = "bg:#ebdbb2 fg:#282828"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Windows = ""
+Ubuntu = ""
+Arch = ""
+
+[directory]
+style = "bg:#fe8019 fg:#282828"
+format = "[ $path ]($style)"
+truncation_length = 3
+fish_style_pwd_dir_length = 1
+home_symbol = "~"
+
+[git_branch]
+symbol = ""
+style = "bg:#fabd2f fg:#282828"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#fabd2f fg:#282828"
+format = "[[($all_status$ahead_behind)]($style)]($style)"
+
+[c]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[php]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[java]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[kotlin]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[python]
+symbol = ""
+style = "bg:#8ec07c fg:#282828"
+format = "[ $symbol $version ]($style)"
+
+[docker_context]
+symbol = ""
+style = "bg:#458588 fg:#ebdbb2"
+format = "[ $symbol $context ]($style)"
+
+[character]
+success_symbol = "[»](bold fg:#fabd2f)"
+error_symbol = "[»](bold fg:#fb4934)"
+
+[line_break]
+disabled = false
