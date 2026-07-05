@@ -150,7 +150,7 @@ After completing all steps above, verify each component:
 
 - Starship prompt loads with powerline segments
 - Fastfetch output appears on startup
-- `ls -la ~/.zshrc ~/.config/starship.toml ~/.config/fastfetch/config.jsonc` — all three should be symlinks (`l` permission bit)
+- All three config paths are symlinks (see symlink check below)
 
 **Symlink check:**
 
@@ -158,7 +158,7 @@ After completing all steps above, verify each component:
 ls -la ~/.zshrc ~/.config/starship.toml ~/.config/fastfetch/config.jsonc
 ```
 
-Each line should show `-> /home/<user>/Windows_Terminal/wsl/ubuntu-26.04/...`.
+Each line should show `-> /home/<user>/Windows_Terminal/wsl/ubuntu-26.04/...` and have the `l` permission bit.
 
 ---
 

@@ -29,7 +29,7 @@ The setup is split into two deployment strategies:
 - Starship prompt with powerline segments, OS icon and git status
 - Fastfetch on shell start for both PowerShell and Zsh
 - Minimal PowerShell profile — only Starship init and Fastfetch
-- WSL Zsh config with safe guards (`command -v` checks before invoking tools)
+- WSL Zsh config with safeguards (`command -v` checks before invoking tools)
 - No auto-sourced secrets, no machine-specific tokens in any config
 
 ---
