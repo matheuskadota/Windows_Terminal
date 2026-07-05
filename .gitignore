@@ -16,3 +16,11 @@ desktop.ini
 .env.*
 *.secret.*
 secrets.*
+
+# Keep placeholder but ignore real screenshots added accidentally
+assets/images/*.png
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.gif
+assets/images/*.webp
+!assets/images/.gitkeep
