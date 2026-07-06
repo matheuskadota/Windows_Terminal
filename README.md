@@ -1,5 +1,9 @@
 # Windows Terminal
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=fff)](https://www.microsoft.com/windows)
+[![WSL2](https://img.shields.io/badge/WSL2-Ubuntu%2026.04-E95420?logo=ubuntu&logoColor=fff)](https://learn.microsoft.com/windows/wsl/)
+
 Personal Windows terminal environment — Windows Terminal, PowerShell 7, WSL2 Ubuntu 26.04, Zsh, Starship, Fastfetch, Gruvbox.
 
 ---

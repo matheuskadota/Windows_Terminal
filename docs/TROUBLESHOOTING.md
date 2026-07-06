@@ -11,7 +11,7 @@ Common issues and fixes for this terminal setup.
 **Check:**
 1. Confirm WSL2 is installed and the distro exists: `wsl --list --verbose`
 2. Confirm the distro name matches exactly — the profile uses `Ubuntu-26.04`
-3. Open Windows Terminal settings and check that `disabledProfileSources` does not include `Windows.Terminal.Wsl` (the `settings.json` in this repo already disables auto-detection to avoid duplicates)
+3. Open Windows Terminal settings and check that `disabledProfileSources` includes `Windows.Terminal.Wsl` (the `settings.json` in this repo already disables auto-detection to avoid duplicates)
 
 **Fix:** Re-run the deploy script to overwrite `settings.json`, then restart Windows Terminal:
 

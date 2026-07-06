@@ -164,19 +164,17 @@ Each line should show `-> /home/<user>/Windows_Terminal/wsl/ubuntu-26.04/...` an
 
 ## Rollback / Safety notes
 
-- The deploy script overwrites live Windows configs without creating backups. Before the first run, manually back up:
-  - `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
-  - `$PROFILE` (PowerShell profile path)
-  - `%USERPROFILE%\.config\starship.toml`
-  - `%USERPROFILE%\.config\fastfetch\config.jsonc`
+- Both scripts create automatic timestamped backups before overwriting anything — no manual backup is required before the first run:
+  - `deploy-windows.sh` backs up existing Windows configs and the PowerShell profile to `%USERPROFILE%\.dotfiles-backups\<timestamp>\` before copying new ones.
+  - `link-ubuntu.sh` backs up existing files or symlinks to `~/.dotfiles-backups/<timestamp>/` before creating new symlinks.
 
-- The link script removes existing files at symlink targets. Back up `~/.zshrc` if you have custom content not in this repo.
-
-- To undo WSL symlinks and restore your old files, remove the symlinks and put your backups back:
+- To undo WSL symlinks and restore your old files:
 
   ```bash
   rm ~/.zshrc ~/.config/starship.toml ~/.config/fastfetch/config.jsonc
-  # restore backups manually
+  # copy the files back from ~/.dotfiles-backups/<timestamp>/
   ```
+
+- To undo a Windows deploy, copy the files back from `%USERPROFILE%\.dotfiles-backups\<timestamp>\` to their original locations.
 
 - The scripts hardcode `WIN_USER=/mnt/c/Users/Mattk` and expect the repo at `$HOME/Windows_Terminal`. Edit these variables at the top of each script before running on a different machine.
